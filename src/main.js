@@ -46,7 +46,7 @@ function descuentoPorSanos(parametro){
 }
 
                                         // ******************** CREO VARIABLE PARA EL SWITCH ********************
-const planSeleccionado=prompt(`
+do {planSeleccionado = prompt(`
 Seleccione el plan que desea cotizar
 1. ${plan1.nombre} $${plan1.precio}
 2. ${plan2.nombre} $${plan2.precio}
@@ -54,6 +54,7 @@ Seleccione el plan que desea cotizar
 4. ${plan4.nombre} $${plan4.precio}
 5. ${plan5.nombre} $${plan5.precio}
 `);
+} while ((planSeleccionado <= 0) || (planSeleccionado > 5))
 
                                 // ******************** ARMO EL SWITCH CON LAS OPCIONES PARA EL USUARIO ********************
 switch(planSeleccionado){
